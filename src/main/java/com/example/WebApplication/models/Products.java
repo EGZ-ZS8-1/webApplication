@@ -1,8 +1,10 @@
 package com.example.WebApplication.models;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
 
 @Data
+@AllArgsConstructor
 public class Products {
     private String title;
     private String description;
