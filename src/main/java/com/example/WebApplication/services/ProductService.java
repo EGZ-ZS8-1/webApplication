@@ -1,12 +1,14 @@
 package com.example.WebApplication.services;
 
 import com.example.WebApplication.models.Products;
+import lombok.Data;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
 
 @Service
+
 public class ProductService {
     private List<Products> products = new ArrayList<>();
     private long ID = 0;
@@ -25,4 +27,13 @@ public class ProductService {
         products.removeIf(product -> product.getId().equals(id));
     }
 
+
+
+
+    public Products getProductsById(Long id) {
+        for (Products product : products) {
+            if (product.getId().equals(id)) return product;
+        }
+        return null;
+    }
 }

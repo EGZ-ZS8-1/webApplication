@@ -6,6 +6,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
 @Controller
@@ -19,15 +20,27 @@ public class ProductController {
 
     @GetMapping("/")
     public String products(Model model) {
-        model.addAllAttributes("products", productService.listProducts);
+        model.addAttribute("products", productService.getProducts());
         return "products";
     }
+    @GetMapping("/product/${id}")
+    public String productInfo(@PathVariable Long id, Model model){
+        model.addAttribute("product", productService.getProductsById(id));
+        return "product-info";
+
+    }
+
     @PostMapping("/product/create")
-    public String createProduct(Products product) {
+    public String createProducts(Products product) {
      productService.saveProduct(product);
      return "redirect:/";
     }
-    public
+    @PostMapping("/product/delete/${id}")
+    public String deleteProducts (@PathVariable Long id) {
+        productService.deleteProducts(id);
+        return "redirect:/";
+
+    }
 
 
 }
