@@ -6,13 +6,13 @@
 <body>
 <h1>BUYSELL</h1><hr>
 <h4>Товары со всей России</h4>
-<list products as product>
+<#list products as product>
 <div>
 
     <p><b>${product.title}</b>${product.price} | <a href="/product/${product}"</p>
 
 </div>
-</list>
+</#list>
 <hr>
 <h3>Создать новый товар</h3>
 <form action="/product/create" method = "post"

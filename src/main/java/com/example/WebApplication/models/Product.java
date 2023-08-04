@@ -5,7 +5,7 @@ import lombok.Data;
 
 @Data
 @AllArgsConstructor
-public class Products {
+public class Product {
     private Long id;
     private String title;
     private String description;
