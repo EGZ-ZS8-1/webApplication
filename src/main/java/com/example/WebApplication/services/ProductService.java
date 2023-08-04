@@ -8,12 +8,7 @@ import java.util.List;
 
 @Service
 public class ProductService {
-    private List<Product> products = new ArrayList<>();
-    private long ID = 0;
-    {
-        products.add(new Product(++ID,"Помидоры", "Абаканские", 200, "Калининград", "Андрей"));
-        products.add(new Product(++ID,"Огурцы", "Абаканские", 100, "Калининград", "Андрей"));
-    }
+
 
     public List<Product> listProducts() {return products;}
 
