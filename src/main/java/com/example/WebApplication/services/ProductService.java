@@ -15,7 +15,7 @@ public class ProductService {
     private final ProductRepository productRepository;
 
     public List<Product> listProducts(String title) {
-        if (title != null) productRepository.findByTitle(title);
+        if (title != null) return productRepository.findByTitle(title);
         return productRepository.findAll();
     }
 
@@ -29,7 +29,7 @@ public class ProductService {
     }
 
     public Product getProductById(Long id) {
-        productRepository.findById(id).orElse(null);
+       return productRepository.findById(id).orElse(null);
     }
 }
 
