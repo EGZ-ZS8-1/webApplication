@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -8,7 +8,7 @@
 <body>
 <h1>Продажа товаров</h1><hr>
 <h2>Товары со всей России</h2>
-
+<#lis
 <div>
     <p><b>${product.title}</b>${product.price}руб. | <a href="/product/${product}"></a></p>
 </div>
@@ -16,7 +16,7 @@
 <hr>
 <h3>Создать новый товар</h3>
 <form action="/product/create" method = "post">
-      Название объявления = <input type = "text" name = "title"/><br> <br>
+    Название объявления = <input type = "text" name = "title"/><br> <br>
     Описание объявления = <input type = "text" name = "description"/><br> <br>
     Цена = <input type = "text" name = "price"/><br><br>
     Город = <input type = "text" name = "city"/><br><br>
