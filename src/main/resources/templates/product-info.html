@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +8,9 @@
 <body>
 <h1>BUYSELL</h1><hr>
 <h4>Подробная информация о товаре</h4>
+<img src  = "/images/${product.images.get(0)}", height="68"/> <br><br>
+<img src = "/images/${product.images.get(1)? if_exist}", height="68"/> <br><br>
+<img src = "/images/${product.images.get(2)? if_exist}", height="68"/> <br><br>
 <b>Название товара:</b>${product.title}<br>
 <b>Описание товара:</b>${product.description}<br>
 <b>Цена товара:</b>${product.price}<br>
