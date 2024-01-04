@@ -10,16 +10,16 @@
 <h2>Товары со всей России</h2>
 
 <div>
-    <h3>Название товара </h3>  <p> <input th:value= ="${product.title}" th:value= "${product.price}" руб. ></p>
+    <h3>Название товара </h3>
 
-    <h3>Цена товара </h3><p> <input th:value= "${product.price}" руб. ></p>
+    <h3>Цена товара </h3><p>
 </div>
 
 <hr>
 <h3>Создать новый товар</h3>
-<form action="/product/create" method = "post">
-    Название объявления = <input type = "text" name = "title" th:value="${product.title}" /> <br><br>
-    Описание объявления = <input type = "text" name = "description" th:value="${product.description}" /><br> <br>
+<form name ="/product/create" method = "post">
+    Название объявления = <input type = "text" name = "title"  /> <br><br>
+    Описание объявления = <input type = "text" name = "description"  /><br> <br>
     Цена = <input type = "text" name = "price"/><br><br>
     Город = <input type = "text" name = "city"/><br><br>
     Имя = <input type = "text" name = "author"/><br><br>
